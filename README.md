@@ -1,3 +1,4 @@
 # Parking-koi
 
-Front End - Bootstrap, html, css etc as we progress 
+Front End - Dart, flutter for everything
+
