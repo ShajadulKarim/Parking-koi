@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demofirstone/sign_in.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -78,7 +79,11 @@ class _MyLoginState extends State<MyLogin> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextButton(onPressed: (){}, child: Text('Sign Up', style: TextStyle( decoration: TextDecoration.underline,
+                        TextButton(onPressed: (){
+                          Navigator.push(
+                            context,MaterialPageRoute(builder: (contest) =>  Signin()));
+                        },
+                            child: Text('Sign Up', style: TextStyle( decoration: TextDecoration.underline,
                             fontSize: 18, color: Color(0xff5f95d7),
                         ),
                         )
