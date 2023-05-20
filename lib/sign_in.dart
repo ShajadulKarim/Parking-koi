@@ -115,9 +115,9 @@ class _SignininState extends State<Signin> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Sign in', style: TextStyle(
+                        Text('Parking owner Registration', style: TextStyle(
                             color: Color(0xff5f95d7),
-                            fontSize: 27, fontWeight: FontWeight.w700
+                            fontSize: 20, fontWeight: FontWeight.w700
                         )),
                         CircleAvatar(
                           radius: 30,

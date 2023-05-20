@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demofirstone/sign_in.dart';
+import 'package:demofirstone/forgetpass.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -88,7 +89,10 @@ class _MyLoginState extends State<MyLogin> {
                         ),
                         )
                         ),
-                        TextButton(onPressed: (){}, child: Text('Forgot Password', style: TextStyle( decoration: TextDecoration.underline,
+                        TextButton(onPressed: (){
+                          Navigator.push(
+                              context,MaterialPageRoute(builder: (contest) =>  ForgetPass()));
+                        }, child: Text('Forgot Password', style: TextStyle( decoration: TextDecoration.underline,
                           fontSize: 18, color: Color(0xff5f95d7),
                         ),
                         )
