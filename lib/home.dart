@@ -29,13 +29,14 @@ class _Home extends State<Home> {
               ),),
             ),
             SingleChildScrollView(
+
               child: Container(
                 padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.5,
                     right: 35, left: 35),
                 child: Column(
                   children: [
                     TextButton(
-                      child: Text('Admin'),
+                      child: Text('User'),
                       onPressed: () {
                         Navigator.push(
                             context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
@@ -48,6 +49,7 @@ class _Home extends State<Home> {
 
                       ),
                     ),
+
                     SizedBox(
                       height: 30,
                     ),
@@ -64,9 +66,25 @@ class _Home extends State<Home> {
                         textStyle: const TextStyle(fontSize: 20),
 
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
 
+                    TextButton(
+                      child: Text('Admin'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
+                      },
+                      style: TextButton.styleFrom(
+                        padding:const EdgeInsets.all(15),
+                        foregroundColor: Colors.white,
+                        backgroundColor:Colors.blue,
+                        textStyle: const TextStyle(fontSize: 20),
 
+                      ),
+                    ),
                       ],
                     ),
                 ),
