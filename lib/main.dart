@@ -8,8 +8,8 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'home',
     routes: {
-      'home' : (context)=>Home()
+      'home': (context) => Home(),
+      'dashboard': (context) => DashboardPage(),
     },
-
   ));
 }
