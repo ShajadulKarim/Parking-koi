@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:demofirstone/sign_in.dart';
-import 'package:demofirstone/forgetpass.dart';
+import 'package:demofirstone/dashboard.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -29,7 +28,7 @@ class _MyLoginState extends State<MyLogin> {
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.5,
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.45,
                     right: 35, left: 35),
                 child: Column(
                   children: [
@@ -63,41 +62,22 @@ class _MyLoginState extends State<MyLogin> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Sign in', style: TextStyle(
+                        Text('Log in', style: TextStyle(
                           color: Color(0xff5f95d7),
                           fontSize: 27, fontWeight: FontWeight.w700
                         )),
                         CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff5f95d7),
-                          child: IconButton(onPressed:(){}, icon: Icon(Icons.arrow_forward)),
+                          child: IconButton(onPressed:(){
+                            Navigator.push(
+                                context,MaterialPageRoute(builder: (contest) =>  DashboardPage()));
+                          }, icon: Icon(Icons.arrow_forward)),
                         )
                       ],
                     ),
                     SizedBox(
                       height: 40,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextButton(onPressed: (){
-                          Navigator.push(
-                            context,MaterialPageRoute(builder: (contest) =>  Signin()));
-                        },
-                            child: Text('Sign Up', style: TextStyle( decoration: TextDecoration.underline,
-                            fontSize: 18, color: Color(0xff5f95d7),
-                        ),
-                        )
-                        ),
-                        TextButton(onPressed: (){
-                          Navigator.push(
-                              context,MaterialPageRoute(builder: (contest) =>  ForgetPass()));
-                        }, child: Text('Forgot Password', style: TextStyle( decoration: TextDecoration.underline,
-                          fontSize: 18, color: Color(0xff5f95d7),
-                        ),
-                        )
-                        )
-                      ],
                     ),
                   ],
                 ),
