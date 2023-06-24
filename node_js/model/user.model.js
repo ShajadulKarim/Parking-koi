@@ -53,6 +53,10 @@ const userSchema = new Schema({
             /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/,
             "userName format is not correct",
         ],
+<<<<<<< HEAD
+=======
+        unique: true,
+>>>>>>> 2a43947fceb538023eee0e897932a81db3c2f994
     },
     email: {
         type: String,
@@ -80,6 +84,7 @@ userSchema.pre("save",async function(){
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(user.password,salt);
         user.password = hash;
+<<<<<<< HEAD
     }catch(error){
         throw error;
     }
@@ -97,3 +102,22 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 };
 const UserModel = db.model('parking_owners',userSchema);
 module.exports = UserModel;
+=======
+    }catch(err){
+        throw err;
+    }
+});
+//used while signIn decrypt
+//userSchema.methods.comparePassword = async function (candidatePassword) {
+    //try {
+        //console.log('----------------no password',this.password);
+        // @ts-ignore
+        //const isMatch = await bcrypt.compare(candidatePassword, this.password);
+        //return isMatch;
+    //} catch (error) {
+       // throw error;
+    //}
+//};
+const UserModel = db.model('parking_owners',userSchema);
+module.exports = UserModel;
+>>>>>>> 2a43947fceb538023eee0e897932a81db3c2f994

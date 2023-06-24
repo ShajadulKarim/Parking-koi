@@ -38,6 +38,7 @@ class _Home extends State<Home> {
                   children: [
                     TextButton(
                       child: Text('User'),
+<<<<<<< HEAD
                       onPressed: () {
                         Navigator.push(
                             context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
@@ -74,6 +75,8 @@ class _Home extends State<Home> {
 
                     TextButton(
                       child: Text('Admin'),
+=======
+>>>>>>> 2a43947fceb538023eee0e897932a81db3c2f994
                       onPressed: () {
                         Navigator.push(
                             context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
@@ -86,7 +89,48 @@ class _Home extends State<Home> {
 
                       ),
                     ),
+<<<<<<< HEAD
                   ],
+=======
+
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextButton(
+                      child: Text('Garage Owner'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
+                      },
+                      style: TextButton.styleFrom(
+                        padding:const EdgeInsets.all(15),
+                        foregroundColor: Colors.white,
+                        backgroundColor:Colors.blue,
+                        textStyle: const TextStyle(fontSize: 20),
+
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+
+                    TextButton(
+                      child: Text('Admin'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,MaterialPageRoute(builder: (contest) =>  MyLogin()));
+                      },
+                      style: TextButton.styleFrom(
+                        padding:const EdgeInsets.all(15),
+                        foregroundColor: Colors.white,
+                        backgroundColor:Colors.blue,
+                        textStyle: const TextStyle(fontSize: 20),
+
+                      ),
+                    ),
+                      ],
+                    ),
+>>>>>>> 2a43947fceb538023eee0e897932a81db3c2f994
                 ),
               ),
             ),

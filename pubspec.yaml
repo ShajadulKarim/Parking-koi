@@ -30,7 +30,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   velocity_x: ^2.6.1
+=======
+  velocity_x: ^2.0.0
+>>>>>>> 2a43947fceb538023eee0e897932a81db3c2f994
   shared_preferences: ^2.0.6
   jwt_decoder: ^2.0.1
   flutter_slidable: ^3.0.0
